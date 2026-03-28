@@ -5,8 +5,8 @@ jobs:
   build-armbian:
     strategy:
       matrix:
-        kernel: [vendor, current]
-        os: [jammy, noble, bookworm, trixie]
+        kernel: [vendor]
+        os: [trixie]
     runs-on: ubuntu-latest
     steps:
       - name: Maximize build space

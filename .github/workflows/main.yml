@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "Free space:"
           df -h
-      - uses: armbian/build@v26.05.0-trunk
+      - uses: armbian/build@main
         name: "Build Armbian"
         with:
           armbian_token:         "${{ secrets.GITHUB_TOKEN }}"  # GitHub token

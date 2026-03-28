@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         kernel: [vendor, current]
-        os: [jammy, noble, bookworm]
+        os: [jammy, noble, bookworm, trixie]
     runs-on: ubuntu-latest
     steps:
       - name: Maximize build space
@@ -19,7 +19,7 @@ jobs:
         run: |
           echo "Free space:"
           df -h
-      - uses: armbian/build@v24.8.0-trunk.132
+      - uses: armbian/build@v26.05.0-trunk
         name: "Build Armbian"
         with:
           armbian_token:         "${{ secrets.GITHUB_TOKEN }}"  # GitHub token
